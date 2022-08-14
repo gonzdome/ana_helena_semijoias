@@ -1,11 +1,25 @@
+const UserModel = require('../models/UserModel');
+
 module.exports = async (request, response) => {
   try {
-    const { email, password } = request.body;
+    const {
+      username,
+      full_name: fullName,
+      document,
+      email,
+      password,
+    } = request.body;
 
-    console.log('user create', email, password);
+    const createUser = await UserModel.create({
+      username,
+      full_name: fullName,
+      document,
+      email,
+      password,
+    });
 
-    return response.status(200).json({ email, password });
+    return response.status(200).json(createUser);
   } catch (err) {
-    console.log(err);
+    return console.log(err);
   }
 };

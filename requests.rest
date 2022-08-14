@@ -1,0 +1,7 @@
+POST http://localhost:3000/user/auth
+Content-Type: application/json
+
+{
+  "username": "sony",
+  "password": "123456"
+}

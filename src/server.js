@@ -8,5 +8,5 @@ mongoose.connect(MONGO_DB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(async () => {
-  app.listen(3000, () => console.log(`Listening on *${3000}`));
+  app.listen(3000, () => console.log(`Listening on ${3000}`));
 });
