@@ -1,6 +1,7 @@
 const express = require('express');
 
 const UserRouter = require('./routes/UserRouter');
+const ClientRouter = require('./routes/ClientRouter');
 
 class App {
   constructor() {
@@ -11,6 +12,7 @@ class App {
 
   routes() {
     this.server.use('/user', UserRouter);
+    this.server.use('/client', ClientRouter);
   }
 
   middleware() {
