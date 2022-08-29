@@ -11,8 +11,8 @@ class App {
   }
 
   routes() {
-    this.server.use('/user', UserRouter);
-    this.server.use('/client', ClientRouter);
+    this.server.use('/users', UserRouter);
+    this.server.use('/clients', ClientRouter);
   }
 
   middleware() {
