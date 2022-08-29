@@ -1,4 +1,5 @@
 const express = require('express');
+const Cors = require('cors');
 
 const UserRouter = require('./routes/UserRouter');
 const ClientRouter = require('./routes/ClientRouter');
@@ -17,6 +18,7 @@ class App {
 
   middleware() {
     this.server.use(express.json());
+    this.server.use(Cors({ origin: '*' }));
   }
 }
 
