@@ -9,6 +9,9 @@ const ProductModel = new mongoose.Schema(
     type: {
       type: String,
     },
+    image_path: {
+      type: String,
+    },
     description: {
       type: String,
     },

@@ -1,4 +1,4 @@
-const ClientCreateService = require('../../services/clients/ClientCreateService');
+const ClientService = require('../../services/products/ProductCreateService');
 
 module.exports = async (request, response) => {
   try {
@@ -8,13 +8,13 @@ module.exports = async (request, response) => {
       document,
     } = request.body;
 
-    const clientCreateService = await ClientCreateService({
+    const clientService = await ClientService({
       full_name,
       email,
       document,
     });
 
-    return response.status(200).json(clientCreateService);
+    return response.status(200).json(clientService);
   } catch (error) {
     return console.log(error);
   }

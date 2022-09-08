@@ -1,4 +1,4 @@
-const UserService = require('../../services/users/UserCreateService');
+const UserCreateService = require('../../services/users/UserCreateService');
 
 module.exports = async (request, response) => {
   try {
@@ -10,7 +10,7 @@ module.exports = async (request, response) => {
       password,
     } = request.body;
 
-    const userService = await UserService(
+    const userCreateService = await UserCreateService(
       username,
       full_name,
       document,
@@ -18,7 +18,7 @@ module.exports = async (request, response) => {
       password,
     );
 
-    return response.status(200).json(userService);
+    return response.status(200).json(userCreateService);
   } catch (error) {
     return console.log(error);
   }
