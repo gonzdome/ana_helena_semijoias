@@ -1,24 +1,32 @@
 const { Seeder } = require('mongoose-data-seed');
-const AdminModel = require('../models/ProductModel');
+const ProductModel = require('../models/ProductModel');
 
 const data = [
   {
-    name: 'PULSEIRA CUSTOMIZÁVEL - TESTE',
+    name: 'Pulseira Infantil Menino - Leãozinho',
     type: 'pulseira',
-    image_path: '../../image/products/pulseira-customisavel.png',
-    description: 'Pulseira que pode conter vários itens e pingentes para atender suas necessidades, podendo também conter o texto desejado nos pingentes',
+    value: 10000,
+    image_path: '../../image/products/pulseira/pulseira-infantil-menino-leaozinho.jpg',
+    description: 'Banhado em ouro 18k ou Ródio/1 ano de garantia no banho da peça/ Antialérgica. Tempo de produção 30 dias úteis.',
+  },
+  {
+    name: 'Anel Infantil Menino - Leãozinho',
+    type: 'anel',
+    value: 10000,
+    image_path: '../../image/products/anel/anel-infantil-menino-leaozinho.jpg',
+    description: 'Banhado em ouro 18k ou Ródio/1 ano de garantia no banho da peça/ Antialérgica. Tempo de produção 30 dias úteis.',
   },
 ];
 
 class MaintainSeeder extends Seeder {
   async shouldRun() {
-    return AdminModel.countDocuments()
+    return ProductModel.countDocuments()
       .exec()
       .then((count) => count === 0);
   }
 
   async run() {
-    return AdminModel.create(data);
+    return ProductModel.create(data);
   }
 }
 

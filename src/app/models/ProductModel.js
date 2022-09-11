@@ -9,6 +9,9 @@ const ProductModel = new mongoose.Schema(
     type: {
       type: String,
     },
+    value: {
+      type: Number,
+    },
     image_path: {
       type: String,
     },

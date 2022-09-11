@@ -2,7 +2,8 @@ const ProductListService = require('../../services/products/ProductListService')
 
 module.exports = async (request, response) => {
   try {
-    const listProducts = await ProductListService();
+    const { type = null } = request.query;
+    const listProducts = await ProductListService({ type });
 
     return response.status(200).json(listProducts);
   } catch (error) {
