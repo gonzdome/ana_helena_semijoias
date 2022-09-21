@@ -20,7 +20,7 @@ if (!MONGO_DB_URL) {
  * @type {Object}
  */
 module.exports.seedersList = {
-  Products,
+  Products
 };
 
 /**
@@ -29,5 +29,5 @@ module.exports.seedersList = {
  */
 module.exports.connect = async () => mongoose.connect(MONGO_DB_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: true
 });

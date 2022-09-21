@@ -7,7 +7,7 @@ module.exports = async ({ type }) => {
     type: 1,
     value: 1,
     image_path: 1,
-    description: 1,
+    description: 1
   }).lean();
 
   return productService;

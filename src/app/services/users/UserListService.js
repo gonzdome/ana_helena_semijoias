@@ -6,7 +6,7 @@ module.exports = async () => {
     full_name: 1,
     document: 1,
     email: 1,
-    password: 1,
+    password: 1
   }).lean();
 
   return clientService;

@@ -7,7 +7,7 @@ module.exports = async ({ full_name, email, document }) => {
   const clientCreate = await ClientModel.create({
     full_name,
     email,
-    document,
+    document
   });
 
   return clientCreate;

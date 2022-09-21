@@ -7,7 +7,7 @@ module.exports = async (request, response) => {
       full_name,
       document,
       email,
-      password,
+      password
     } = request.body;
 
     const userCreateService = await UserCreateService({
@@ -15,7 +15,7 @@ module.exports = async (request, response) => {
       full_name,
       document,
       email,
-      password,
+      password
     });
 
     return response.status(200).json(userCreateService);
