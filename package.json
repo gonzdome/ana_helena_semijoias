@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "seedProduct": "md-seed run Products",
-    "dev:inspect": "nodemon --ignore node_modules/ --inspect src/server.js"
+    "dev:inspect": "nodemon --ignore node_modules/ --inspect src/server.js",
+    "lint": "eslint . --ext js,jsx,ts,tsx --fix"
   },
   "repository": {
     "type": "git",
