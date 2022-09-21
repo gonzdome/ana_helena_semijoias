@@ -10,13 +10,13 @@ module.exports = async (request, response) => {
       password,
     } = request.body;
 
-    const userCreateService = await UserCreateService(
+    const userCreateService = await UserCreateService({
       username,
       full_name,
       document,
       email,
       password,
-    );
+    });
 
     return response.status(200).json(userCreateService);
   } catch (error) {
