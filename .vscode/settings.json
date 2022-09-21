@@ -1,11 +1,12 @@
 {
     "launch": {
-
         "configurations": [],
         "compounds": [],
-          "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-          },
-          "eslint.validate": ["javascript"]
-    }
+      },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "eslint.validate": ["javascript"],
+    "editor.wordWrapColumn": 120,
+    "editor.wordWrap": "on"
 }
