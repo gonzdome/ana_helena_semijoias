@@ -4,27 +4,27 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 const UserModel = new mongoose.Schema(
   {
     username: {
-      type: String,
+      type: String
     },
     full_name: {
-      type: String,
+      type: String
     },
     email: {
-      type: String,
+      type: String
     },
     document: {
-      type: String,
+      type: String
     },
     password: {
-      type: String,
-    },
+      type: String
+    }
   },
   {
     timestamps: {
       createdAt: 'created_at',
-      updatedAt: 'updated_at',
-    },
-  },
+      updatedAt: 'updated_at'
+    }
+  }
 );
 
 mongoose.plugin(mongoosePaginate);

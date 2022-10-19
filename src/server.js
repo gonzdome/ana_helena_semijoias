@@ -6,7 +6,7 @@ const { MONGO_DB_URL } = process.env;
 
 mongoose.connect(MONGO_DB_URL, {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+  useUnifiedTopology: true
 }).then(async () => {
   app.listen(3000, () => console.log(`Listening on http://localhost:${3000}`));
 });

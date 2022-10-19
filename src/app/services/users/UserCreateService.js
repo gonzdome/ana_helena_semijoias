@@ -5,26 +5,31 @@ module.exports = async ({
   full_name,
   document,
   email,
-  password,
+  password
 }) => {
   const userFind = await UserModel.findOne({
-    $or: [
-      { username },
-      { full_name },
-      { document },
-      { email },
-      { password },
-    ],
-  });
-  if (userFind) { return { error_message: 'Os dados inseridos já constam no sistema, por favor entrar em contato com o suporte!' }; }
-
-  const createUser = await UserModel.create({
     username,
     full_name,
     document,
     email,
-    password,
+    password
   });
+  if (userFind) { return { error_message: 'Os dados inseridos já constam no sistema, por favor entrar em contato com o suporte!' }; }
 
-  return createUser;
+  const createUser = await UserModel.create(
+    {
+      username,
+      full_name,
+      document,
+      email,
+      password
+    }
+  );
+
+  return {
+    username: createUser.username,
+    full_name: createUser.full_name,
+    document: createUser.document,
+    email: createUser.email
+  };
 };

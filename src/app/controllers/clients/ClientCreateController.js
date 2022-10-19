@@ -5,13 +5,13 @@ module.exports = async (request, response) => {
     const {
       full_name,
       email,
-      document,
+      document
     } = request.body;
 
     const clientCreateService = await ClientCreateService({
       full_name,
       email,
-      document,
+      document
     });
 
     return response.status(200).json(clientCreateService);

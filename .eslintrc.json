@@ -13,8 +13,13 @@
     "rules": {
     "linebreak-style": "off",
     "no-console": "off",
-    "camelcase": "off",
     "max-len": "off",
-    "class-methods-use-this": "off"
+    "class-methods-use-this": "off",
+    "semi": ["error", "always"],
+    "no-throw-literal": "off",
+    "jest/expect-expect": "off",
+    "camelcase": "off",
+    "no-new": "off",
+    "comma-dangle": ["error", "never"]
     }
 }

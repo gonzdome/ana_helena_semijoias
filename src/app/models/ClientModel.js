@@ -4,21 +4,21 @@ const mongoosePaginate = require('mongoose-paginate-v2');
 const ClientModel = new mongoose.Schema(
   {
     full_name: {
-      type: String,
+      type: String
     },
     email: {
-      type: String,
+      type: String
     },
     document: {
-      type: String,
-    },
+      type: String
+    }
   },
   {
     timestamps: {
       createdAt: 'created_at',
-      updatedAt: 'updated_at',
-    },
-  },
+      updatedAt: 'updated_at'
+    }
+  }
 );
 
 mongoose.plugin(mongoosePaginate);
