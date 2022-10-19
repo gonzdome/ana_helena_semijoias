@@ -1,8 +1,8 @@
 const ProductModel = require('../../models/ProductModel');
 
 module.exports = async ({ type }) => {
-  const data = type || '';
-  const productService = await ProductModel.find({ type: data }, {
+  const data = type === null ? {} : { type };
+  const productService = await ProductModel.find(data, {
     name: 1,
     type: 1,
     value: 1,
